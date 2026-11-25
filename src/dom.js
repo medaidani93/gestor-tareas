@@ -1,9 +1,5 @@
-// ==========================================
-// ARCHIVO: src/dom.js
-// ==========================================
-
 import { estado } from "./estado.js";
-import { contarPendientes } from "./tareas.js";
+import { contarPendientes, contarCompletadas } from "./tareas.js";
 
 export function render() {
   const lista = document.querySelector("#lista");
@@ -24,7 +20,8 @@ export function render() {
     lista.append(li);
   }
 
-  // 3. Sincronizamos el recuento de pendientes
+  // 3. Sincronizamos el recuento de completadas y pendientes
+  const completadas = contarCompletadas(estado.tareas);
   const pendientes = contarPendientes(estado.tareas);
-  resumen.textContent = `Tienes ${pendientes} tareas pendientes`;
+  resumen.textContent = `${completadas} completadas · ${pendientes} pendientes`;
 }
