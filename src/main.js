@@ -1,13 +1,8 @@
-// src/main.js — arranque y orquestación
 import "./style.css";
-import { estado } from "./estado.js";
-import { contarPendientes, contarCompletadas } from "./tareas.js";
+import { render } from "./dom.js";
 
-// 1. Muestra los datos estructurados en la consola de DevTools
-console.table(estado.tareas);
+const titulo = document.querySelector("h1");
+titulo.textContent = "Gestor de tareas";
+titulo.classList.add("titulo");
 
-// 2. Calcula las pendientes y completadas y muestra un resumen en el contenedor de la página
-const pendientes = contarPendientes(estado.tareas);
-const completadas = contarCompletadas(estado.tareas);
-
-document.querySelector("#app").textContent = `${completadas} completadas, ${pendientes} pendientes`;
+render();
