@@ -10,3 +10,28 @@
   text-decoration: line-through;
   opacity: 0.6;
 }
+.aprobado {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.suspenso {
+  color: #b91c1c;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 320px;
+  margin: 0.75rem 0;
+}
+
+th,
+td {
+  border: 1px solid #cbd5e1;
+  padding: 0.45rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f5f9;
+}

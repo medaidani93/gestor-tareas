@@ -1,11 +1,13 @@
 import "./style.css";
 import { render } from "./dom.js";
+import { renderNotas } from "./dom-notas.js";
 
 const titulo = document.querySelector("h1");
 titulo.textContent = "Gestor de tareas";
 titulo.classList.add("titulo");
 
 render();
+renderNotas();
 
 /*
 // === RETO 1: Predice antes de ejecutar ===
@@ -36,6 +38,4 @@ console.log("C:", h1.textContent, h1.children.length);
 console.log("D:", document.getElementById("#lista"));
 // Resultado D: null
 // Explicación: getElementById recibe únicamente el nombre del id ("lista"), sin el símbolo "#" de los selectores CSS.
-
-
 */
