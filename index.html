@@ -7,8 +7,20 @@
   </head>
   <body>
     <div id="app">
-      <h1></h1>
+      <h1>Gestor de tareas</h1>
+      <button id="btn-tema" type="button">🌙 Modo oscuro</button>
       <p id="resumen"></p>
+
+      <form id="form-tarea">
+        <input
+          type="text"
+          id="input-tarea"
+          placeholder="¿Qué necesitas hacer?"
+          autocomplete="off"
+        />
+        <button type="submit">Añadir</button>
+      </form>
+
       <ul id="lista"></ul>
     </div>
     <script type="module" src="/src/main.js"></script>

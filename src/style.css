@@ -10,3 +10,23 @@
   text-decoration: line-through;
   opacity: 0.6;
 }
+.titulo {
+  font-family: system-ui, sans-serif;
+}
+
+body.oscuro {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+li.completada span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
